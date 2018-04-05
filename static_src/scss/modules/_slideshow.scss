@@ -1,0 +1,79 @@
+.slideshow,
+.slideshow:after {
+  content: '';
+  height: 100%;
+  left: 0;
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.slideshow li span {
+  @include animation-general(imageAnimation, 36s, linear, infinite, 0s);
+  @include filter-brightness(50%);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  color: transparent;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  z-index: 0;
+}
+
+/* Generating imageAnimation with vendor prefixes */
+@include keyframes(imageAnimation) {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  8% {
+    opacity: 1;
+    transform: scale(1.05);
+    animation-timing-function: ease-out;
+  }
+  17% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  25% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* Sideshow items */
+$slideshow-items: (
+  1: 0s,
+  2: 6s,
+  3: 12s,
+  4: 18s,
+  5: 24s,
+  6: 30s
+);
+
+@each $key, $value in $slideshow-items {
+  .slideshow li:nth-child(#{$key}) span {
+    @include animation-delay($value);
+    background-image: url("../assets/photo#{$key}.jpeg");
+  }
+
+  .slideshow li:nth-child(#{$key}) div {
+    @include animation-delay($value);
+  }
+}
+
+/* Show at least something when animations not supported */
+.no-cssanimations .slideshow li span {
+    opacity: 1;
+}

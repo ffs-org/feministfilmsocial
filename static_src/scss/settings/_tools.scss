@@ -1,0 +1,41 @@
+@mixin animation-delay($delay) {
+    animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -ms-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    -webkit-animation-delay: $delay;
+}
+
+@mixin animation-general($name, $duration, $timing, $iteration, $delay) {
+    animation: $name $duration $timing $iteration $delay;
+    -moz-animation: $name $duration $timing $iteration $delay;
+    -ms-animation: $name $duration $timing $iteration $delay;
+    -o-animation: $name $duration $timing $iteration $delay;
+    -webkit-animation: $name $duration $timing $iteration $delay;
+}
+
+@mixin filter-brightness ($value) {
+    filter: brightness($value);
+    -moz-filter: brightness($value);
+    -ms-filter: brightness($value);
+    -o-filter: brightness($value);
+    -webkit-filter: brightness($value);
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-ms-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
