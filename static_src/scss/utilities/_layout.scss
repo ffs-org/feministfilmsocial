@@ -24,21 +24,25 @@ $wrapper-max-wdith: 900px;
 
 a.link {
   border: 1px solid #fff;
-  padding: 20px 80px;
+  padding: 10px 60px;
 }
 
 .strapline {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 a.link:hover {
-  background-color: #ffffff40;
+  background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
   text-decoration: none;
 }
 
 .hide {
   display: none;
+}
+
+.form {
+  margin-top: 30px;
 }
 
 input {
@@ -59,12 +63,57 @@ input[type="submit"] {
 }
 
 .quote {
-  max-width: 400px;
-  margin: 50px auto;
+  max-width: 500px;
+  margin: 10px auto;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .quote q {
   font-family: 'Caveat', cursive;
+}
+
+@include mq($from: mobile) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .centered {
+    width: 300px;
+  }
+}
+
+@include mq($from: desktop) {
+  .centered {
+    width: 800px;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  .quote {
+    font-size: 1.4em;
+    max-width: 400px;
+  }
+
+  a.link {
+    padding: 20px 80px;
+  }
+
+  .strapline {
+    margin-top: 30px;
+  }
 }
