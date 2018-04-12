@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="feminist, cinema, movies, lesbians, social" />
+  <meta name="description" content="Be inspired surrounded by like-minded women" />
+  <title>Feminist Film Social</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+  <header><div class="header__copy">Feminist Film Social</div></header>
+  <section class="container">
+    <div class="wrapper min-h-100">
+      <div class="centered button-container">
+        <a href="#join" class="button">Join</a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="min-h-100 u-p-horizontal u-p-bottom">
+      <div class="wrapper vertical-center u-p-top-massive text-centered">
+        <h3>So the idea is to watch best feminists movies of all times! Why? Because its empowering, inspiring and it’s great to share these moments in a good company! When and what? Subscribe and you'll find out.</h3>
+      </div>
+      <div class="centered u-p-top-massive text-centered">
+        <h3 class="u-p-bottom">Sign up to our mailing list <br> and be the first to discover the next secret screening</h3>
+        <div class="form" id="join">
+          <form method="POST" action="/subscribe" id="subscribe-form">
+            <input id="name" name="name" type="text" placeholder="Your name" />
+            <input id="email" name="email" type="email" placeholder="Your e-mail" />
+            <input type="submit" text="Submit" />
+           </form>
+           <div class="content-section">
+             <p class="js-error"></p>
+             <p class="js-success"></p>
+           </div>
+        </div>
+        <div class="quote">
+          <p><q>Feminism has never been about getting a job for one woman. It's about making life more fair for women everywhere. It's not about a piece of the existing pie; there are too many of us for that. It's about baking a new pie. - Gloria Steinem</q></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

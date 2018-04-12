@@ -1,5 +1,8 @@
+const form = document.querySelector('#subscribe-form');
+
 function isEmail(email) {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
   return regex.test(email);
 }
 
@@ -10,7 +13,7 @@ function resolveErrors() {
 function validateEmail() {
   document.querySelector('#email').addEventListener('focusout', (e) => {
     const email = e.target.value;
-    console.log('email', email);
+
     if (isEmail(email)) {
       console.log(true);
     } else {
@@ -19,11 +22,13 @@ function validateEmail() {
   })
 }
 
-const form = document.querySelector('#subscribe-form');
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+
   const email = e.target.email.value;
   const name = e.target.name.value;
+
   if (isEmail(email)) {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'subscribe', true);
@@ -38,6 +43,8 @@ form.addEventListener('submit', (e) => {
   } else {
     document.querySelector('.js-error').innerHTML = 'Not valid email';
     e.target.email.addEventListener('focusin', resolveErrors);
+
     return;
   }
+
 });
