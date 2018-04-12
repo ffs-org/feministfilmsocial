@@ -1,13 +1,15 @@
 /* Base settings & tools etc */
+@import "settings/breakpoints";
 @import "node_modules/sass-mq/mq";
+@import "lib/inuit-globals";
+@import "lib/inuit-responsive-spacings";
+@import "lib/inuit-spacings";
+
 @import "settings/tools";
 @import "settings/reset";
 @import "settings/page";
 
-
 /* Modules */
-@import "modules/slideshow";
+@import "modules/modules";
 
 
-/* Utilities */
-@import "utilities/layout";
