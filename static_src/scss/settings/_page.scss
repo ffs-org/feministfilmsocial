@@ -25,15 +25,18 @@ header {
 @include mq($until: tablet-small) {
  .header__copy {
     text-align: center;
-  } 
+  }
 }
 
 a {
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 1.5em;
-  padding: 10px 60px;
+  background-color: #000;
+  border: 1px solid #9AA2FF;
+  border-radius: 4px;
+  color: #d9d9d9;
+  font-size: 13px;
+  padding: 10px 180px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 a:active,
@@ -54,15 +57,19 @@ p {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 1.6em;
+  line-height: 18px;
+  color: #9AA2FF;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  opacity: 0.85;
 }
 
 h3 {
   font-size: 1em;
+  color: #151515;
 }
 
 h4 {
@@ -83,22 +90,26 @@ h5 {
 
 @include mq($from: mobile) {
   h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1em;
   }
 
   h3 {
-    font-size: 1.2em;
+    font-size: 0.8em;
   }
 }
 
 
 @include mq($from: desktop) {
   h1 {
-    font-size: 4em;
+    font-size: 1.6em;
   }
 
   h2 {
-    font-size: 2.5em;
+    font-size: 1em;
   }
 
   h3 {

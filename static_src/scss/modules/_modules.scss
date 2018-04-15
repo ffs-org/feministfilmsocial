@@ -11,11 +11,13 @@ $wrapper-max-wdith: 900px;
 }
 
 .container {
-  background-image: url('../assets/main.jpg');
+  background-image: url('../assets/bg-thelmalouise-1920.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow: hidden;
+  height: 120vh;
 }
 
 .vertical-center {
@@ -32,11 +34,27 @@ $wrapper-max-wdith: 900px;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
+  background-color: #f2f2f2;
+  width: 100%;
 }
 
-.button-container {
+.text-container {
   position: relative;
-  top: 80vh;
+  top: 78vh;
+  text-align: center;
+}
+
+.bottom-image {
+  background-image: url('../assets/footer-image.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 200px; // FIXME setting height feels wring
+}
+
+.upper {
+  text-transform: uppercase;
 }
 
 .box {
@@ -51,7 +69,6 @@ $wrapper-max-wdith: 900px;
   text-align: center;
 }
 
-
 input {
   display: block;
   font-size: 16px;
@@ -63,7 +80,7 @@ input {
 input[type="submit"] {
   background-color: transparent;
   border: 1px solid #fff;
-  color: #fff;  
+  color: #fff;
   margin-top: 15px;
   width: 100px;
 }
