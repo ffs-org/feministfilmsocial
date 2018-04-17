@@ -4,36 +4,19 @@
 
 body {
   background-color: #000;
-}
-
-header {
-  background: transparent;
-  height: auto;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
-}
-
-.header__copy {
-  color: #ffff;
-  font-size: 1.5em;
-  padding: 1em;
-}
-
-@include mq($until: tablet-small) {
- .header__copy {
-    text-align: center;
-  } 
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 1.5em;
-  padding: 10px 60px;
+  background-color: #000;
+  border: 1px solid #9AA2FF;
+  border-radius: 4px;
+  color: #d9d9d9;
+  font-size: 13px;
+  padding: 10px 166px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 a:active,
@@ -54,60 +37,46 @@ p {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 1.6em;
+  line-height: 18px;
+  color: #9AA2FF;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  opacity: 0.85;
 }
 
 h3 {
   font-size: 1em;
 }
 
-h4 {
-  font-size: 0.8em;
-}
-
-h5 {
-  font-size: 0.5em;
-}
-
-.quote {
-  max-width: 500px;
-  margin: 10px auto;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-
 @include mq($from: mobile) {
   h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1em;
   }
 
   h3 {
-    font-size: 1.2em;
+    font-size: 0.8em;
   }
 }
 
 
 @include mq($from: desktop) {
   h1 {
-    font-size: 4em;
+    font-size: 1.6em;
   }
 
   h2 {
-    font-size: 2.5em;
+    font-size: 1em;
   }
 
   h3 {
-    font-size: 2em;
-  }
-
-  .quote {
-    font-size: 1.4em;
-    max-width: 400px;
+    font-size: 0.8em;
   }
 
   a.link {

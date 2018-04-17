@@ -1,3 +1,5 @@
+$form-border-color: #cacaca;
+
 $wrapper-max-wdith: 900px;
 
 .wrapper {
@@ -6,15 +8,116 @@ $wrapper-max-wdith: 900px;
   max-width: $wrapper-max-wdith;
 }
 
+.h-100 {
+  height: 100vh;
+}
+
+.h-50 {
+  height: 50vh;
+}
+
 .min-h-100 {
-  min-height: 100vh;
+  height: 100vh;
+}
+
+.u-pt20 {
+  padding-top: 20vh;
+}
+
+@include mq($until: tablet-small) {
+  .hide-until-tablet-small {
+    display: none;
+  }
+}
+
+.logo-container {
+  left: -127px;
+  position: absolute;
+  top: -25px;
+  width: auto;
+  height: 68vh;
+  z-index: 2;
+}
+
+
+@include mq($until: tablet-small, $and: '(orientation:landscape)') {
+ .logo-container {
+   left: -20px;
+   top: -15px;
+   width: 55vw;
+   height: auto;
+  }
+}
+
+@include mq($from : tablet-small, $and: '(orientation:portrait)') {
+ .logo-container {
+   left: -240px;
+    top: -44px;
+    width: auto;
+    height: 81vh;
+  }
+}
+
+
+@include mq($from: tablet-small, $and: '(orientation:landscape)') {
+ .logo-container {
+   left: -26px;
+   top: -33px;
+   width: 68vw;
+   height: auto;
+  }
+}
+
+
+@include mq($from: desktop) {
+ .logo-container {
+   width: 62vw;
+  }
+}
+
+
+@include mq($from: desktop-large) {
+ .logo-container {
+   width: 70vw;
+  }
+}
+
+@include mq($from: desktop-huge) {
+ .logo-container {
+   top: -40px;
+   width: 55vw;
+  }
 }
 
 .container {
-  background-image: url('../assets/main.jpg');
+  background-image: url('../assets/bg-thelmalouise-1920.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: 120vh;
+}
+
+@include mq($until : tablet, $and: '(orientation:portrait)') {
+ .container {
+   background-position: 60% 50%;
+  }
+}
+
+.theme-gray {
+  background-color: #f2f2f2;
+}
+
+.theme-gray h1,
+.theme-gray h2,
+.theme-gray h3,
+.theme-gray p {
+  color: #151515;
+}
+
+.container::before {
+  content: '';
   position: relative;
 }
 
@@ -32,15 +135,26 @@ $wrapper-max-wdith: 900px;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
+  width: 100%;
 }
 
-.button-container {
+.text-container {
   position: relative;
-  top: 80vh;
+  top: 78vh;
+  text-align: center;
 }
 
-.box {
-  margin-top: 50px;
+.bottom-image {
+  background-image: url('../assets/footer-image.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 200px; // FIXME setting height feels wring
+}
+
+.upper {
+  text-transform: uppercase;
 }
 
 .hide {
@@ -51,19 +165,46 @@ $wrapper-max-wdith: 900px;
   text-align: center;
 }
 
+.bottom-img {
+  background-image: url('../assets/footer-image.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  width: 100vw;
+}
 
 input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid $form-border-color;
+  color: #8f8f8f;
   display: block;
   font-size: 16px;
-  margin: 10px auto;
-  padding: 10px 10px;
-  width: 200px;
+  line-height: 26px;
+  margin: 20px auto;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+  width: 80%;
 }
 
 input[type="submit"] {
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;  
-  margin-top: 15px;
-  width: 100px;
+  background-color: #e3dcdf;
+  border: 1px solid #343334;
+  border-radius: 4px;
+  color: #343334;
+  font-size: 13px;
+  margin-top: 40px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+@include mq($from : tablet-small) {
+ input,
+ input[type="submit"] {
+   width: 364px;
+  }
 }
