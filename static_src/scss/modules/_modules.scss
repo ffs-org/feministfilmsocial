@@ -45,10 +45,10 @@ $wrapper-max-wdith: 900px;
 
 @include mq($from : tablet-small, $and: '(orientation:portrait)') {
  .logo-container {
-   left: -87px;
+   left: -240px;
     top: -44px;
     width: auto;
-    height: 69vh;
+    height: 81vh;
   }
 }
 
@@ -91,6 +91,12 @@ $wrapper-max-wdith: 900px;
   position: relative;
   overflow: hidden;
   height: 120vh;
+}
+
+@include mq($until : tablet, $and: '(orientation:portrait)') {
+ .container {
+   background-position: 60% 50%;
+  }
 }
 
 .theme-gray {
