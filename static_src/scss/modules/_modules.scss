@@ -24,6 +24,12 @@ $wrapper-max-wdith: 900px;
   padding-top: 20vh;
 }
 
+@include mq($until: tablet-small) {
+  .hide-until-tablet-small {
+    display: none;
+  }
+}
+
 .logo-container {
   left: -127px;
   position: absolute;
@@ -180,7 +186,7 @@ input {
   padding-bottom: 5px;
   padding-top: 5px;
   text-align: center;
-  width: 364px;
+  width: 80%;
 }
 
 input[type="submit"] {
@@ -193,5 +199,12 @@ input[type="submit"] {
   padding-bottom: 5px;
   padding-top: 5px;
   text-transform: uppercase;
-  width: 364px;
+  width: 80%;
+}
+
+@include mq($from : tablet-small) {
+ input,
+ input[type="submit"] {
+   width: 364px;
+  }
 }
