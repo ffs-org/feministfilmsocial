@@ -6,28 +6,6 @@ body {
   background-color: #000;
 }
 
-header {
-  background: transparent;
-  height: auto;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
-}
-
-.header__copy {
-  color: #ffff;
-  font-size: 1.5em;
-  padding: 1em;
-}
-
-@include mq($until: tablet-small) {
- .header__copy {
-    text-align: center;
-  }
-}
-
 a {
   background-color: #000;
   border: 1px solid #9AA2FF;
@@ -71,22 +49,6 @@ h3 {
   font-size: 1em;
 }
 
-h4 {
-  font-size: 0.8em;
-}
-
-h5 {
-  font-size: 0.5em;
-}
-
-.quote {
-  max-width: 500px;
-  margin: 10px auto;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-
 @include mq($from: mobile) {
   h1 {
     font-size: 1.6em;
@@ -113,11 +75,6 @@ h5 {
 
   h3 {
     font-size: 0.8em;
-  }
-
-  .quote {
-    font-size: 1.4em;
-    max-width: 400px;
   }
 
   a.link {

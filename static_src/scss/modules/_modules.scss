@@ -24,6 +24,65 @@ $wrapper-max-wdith: 900px;
   padding-top: 20vh;
 }
 
+.logo-container {
+  left: -127px;
+  position: absolute;
+  top: -25px;
+  width: auto;
+  height: 68vh;
+  z-index: 2;
+}
+
+
+@include mq($until: tablet-small, $and: '(orientation:landscape)') {
+ .logo-container {
+   left: -20px;
+   top: -15px;
+   width: 55vw;
+   height: auto;
+  }
+}
+
+@include mq($from : tablet-small, $and: '(orientation:portrait)') {
+ .logo-container {
+   left: -87px;
+    top: -44px;
+    width: auto;
+    height: 69vh;
+  }
+}
+
+
+@include mq($from: tablet-small, $and: '(orientation:landscape)') {
+ .logo-container {
+   left: -26px;
+   top: -33px;
+   width: 68vw;
+   height: auto;
+  }
+}
+
+
+@include mq($from: desktop) {
+ .logo-container {
+   width: 62vw;
+  }
+}
+
+
+@include mq($from: desktop-large) {
+ .logo-container {
+   width: 70vw;
+  }
+}
+
+@include mq($from: desktop-huge) {
+ .logo-container {
+   top: -40px;
+   width: 55vw;
+  }
+}
+
 .container {
   background-image: url('../assets/bg-thelmalouise-1920.png');
   background-position: center center;
@@ -35,7 +94,7 @@ $wrapper-max-wdith: 900px;
 }
 
 .theme-gray {
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
 }
 
 .theme-gray h1,
@@ -86,10 +145,6 @@ $wrapper-max-wdith: 900px;
   text-transform: uppercase;
 }
 
-.box {
-  margin-top: 50px;
-}
-
 .hide {
   display: none;
 }
@@ -116,7 +171,6 @@ input {
   font-size: 16px;
   line-height: 26px;
   margin: 20px auto;
-  // padding: 5px 10px;
   padding-bottom: 5px;
   padding-top: 5px;
   text-align: center;
