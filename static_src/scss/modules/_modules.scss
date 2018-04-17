@@ -31,9 +31,9 @@ $wrapper-max-wdith: 900px;
 }
 
 .logo-container {
-  left: -127px;
+  left: -105px;
   position: absolute;
-  top: -25px;
+  top: -22px;
   width: auto;
   height: 68vh;
   z-index: 2;
@@ -200,6 +200,7 @@ input[type="submit"] {
   padding-top: 5px;
   text-transform: uppercase;
   width: 80%;
+  -webkit-appearance: none;
 }
 
 @include mq($from : tablet-small) {
