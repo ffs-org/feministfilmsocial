@@ -8,8 +8,8 @@
     "start:watch": "nodemon --exec npm run start",
     "build": "gulp deploy",
     "build:watch": "gulp watch",
-    "start:dev": "npm run start:watch & npm run build:watch",
-    "postinstall": "npm run build"
+    "build:prod": "npm run build && NODE_ENV=production PORT=8000 && npm run start",
+    "start:dev": "npm run start:watch & npm run build:watch"
   },
   "repository": {
     "type": "git",
@@ -34,8 +34,5 @@
     "gulp-sass": "^4.0.0",
     "nodemon": "^1.17.3",
     "sass-mq": "^4.0.2"
-  },
-  "engines": {
-    "node": "8.2.1"
   }
 }
