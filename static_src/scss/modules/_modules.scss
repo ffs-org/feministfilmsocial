@@ -24,6 +24,14 @@ $wrapper-max-wdith: 900px;
   padding-top: 20vh;
 }
 
+.footer {
+  margin-top: -20px;
+}
+
+.footer h3 {
+  color: #fff !important;
+}
+
 @include mq($until: tablet-small) {
   .hide-until-tablet-small {
     display: none;
@@ -140,7 +148,7 @@ $wrapper-max-wdith: 900px;
 
 .text-container {
   position: relative;
-  top: 78vh;
+  top: 75vh;
   text-align: center;
 }
 
@@ -172,6 +180,12 @@ $wrapper-max-wdith: 900px;
   background-size: cover;
   height: 30vh;
   width: 100vw;
+}
+
+.bottom-img h4:first-child {
+  color: #fff !important;
+  padding-top: 30px;
+  line-height: 4;
 }
 
 input {

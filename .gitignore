@@ -6,3 +6,5 @@ node_modules
 
 # Compiled static
 public/static/
+
+.env
