@@ -50,7 +50,6 @@ form.addEventListener('submit', (e) => {
 });
 
 const currentYear = (new Date()).getFullYear();
-console.log('year', currentYear);
 document.getElementById('copy').innerHTML = currentYear;
 
 function smoothScroll(target) {
